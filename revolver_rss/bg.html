@@ -28,7 +28,8 @@ chrome.browserAction.setBadgeBackgroundColor({color: badgeColor});
 
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
-	if (stopNow) {
+  if (stopNow) {
+	    openAllMonitoringPage();
 		go();
 		chrome.browserAction.setBadgeText({text: 'on'});
 	} else {

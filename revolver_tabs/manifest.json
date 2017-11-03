@@ -13,5 +13,10 @@
    "name": "Revolver - Tabs",
    "options_page": "options.html",
    "permissions": [ "tabs", "idle" ],
-   "version": "0.71"
+   "version": "0.71",
+   "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "css": ["header.css"],
+      "js": [ "jquery-3.2.1.min.js", "header.js"]
+   }]
 }
